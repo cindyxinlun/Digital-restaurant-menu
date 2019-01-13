@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<head>
+    <title>The New Fitness Cookbook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Fira+Sans" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+
+    <style>
+        body {  
+            font-family: helvetica, sans-serif;
+            max-width: 600px;
+            margin:0 auto;
+        }
+
+      	div {
+      		height: 200px;
+      		background: url("https://zavrel.net/amuse.jpg");
+      		background-size: cover;
+          position: relative;
+          border-radius: 12px;
+      	}
+
+      	.first{
+          background: url("https://zavrel.net/amuse.jpg")
+      	}
+
+      	.second{
+      		background: url("https://zavrel.net/pasta.jpg");
+      	}
+
+      	.third{
+      		background: url("https://zavrel.net/salmon.jpg");
+      	}
+        
+
+        p{
+          color: white;
+          background-color: black;
+          
+          background-color: rgba(0,0,0,1);
+          background: linear-gradient(bottom, rgba(0,0,0,1),rgba(0,0,0,.4));
+          background: -webkit-linear-gradient(bottom, rgba(0,0,0,1),rgba(0,0,0,.4));/*Chrome*/
+          background: -moz-linear-gradient(bottom, rgba(0,0,0,1),rgba(0,0,0,.4));/*Safari*/
+          background: -o-linear-gradient(bottom, rgba(0,0,0,1),rgba(0,0,0,.4));/*Opera*/
+        
+          padding: 18px;
+          text-align: justify;
+          line-height: 28px;
+          position: absolute;
+          bottom: 0;
+          margin: 0;
+          width: auto;
+          text-height: 30px;
+        }
+
+        .price{
+          float:right;
+        }
+
+        h1{
+          font-family: 'Fira Sans', sans-serif;
+          font-family: 'Baloo', cursive;
+          font-size: 40px;
+          text-align: center;
+        }
+        
+        h2{
+          text-align: center;
+          margin: -40px 0 70px 0;
+        }
+
+        small{
+          opacity: 0;
+        }
+
+        .show-description p{
+          height: 150px;
+        }
+        
+        .show-description small{
+          opacity: 1;
+
+        }
+
+        @media(max-width: 500px){
+
+          h1{
+            font-size: 50px;
+           /* color: red; */ /*max-widtht超過500px字變成紅色*/
+           margin-top:20px;
+           line-height: 50px;
+          }
+
+          h2{
+            font-size: 20px;
+            margin: 20px 0 30px 0;
+          }
+
+          div{
+            margin: 20px 12px 0px 12px;
+          }
+
+          p{
+            font-size: 20px;
+            line-height: 25px;
+          }
+
+          small{
+            font-size: 16px;
+          }
+
+
+
+        
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>The New Fitness Cookbook</h1>
+    <h2>Fresh & whole food recipes</h2>
+	
+	<div class="first show-description">
+	    <p>
+        Amuse bouche <span class="price">$1</span> <br>
+	     <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+	    </p>
+	</div>
+
+	<div class="second">
+	    <p>Tagliatelle al pomodoro <span class="price">$8</span> <br>
+	       <small>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small>
+	    </p>
+	</div>
+
+	<div class="third">
+	    <p>Salmon with zucchini <span class="price">$15</span> <br>
+	       <small>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+         </small>
+	    </p>
+	</div>
+
+  <script>
+    $('div').on('click', function(){
+      $(this).toggleClass('show-description');
+    });
+  </script>
+  
+</body>
